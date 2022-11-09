@@ -12,9 +12,11 @@
     </form>
         <button><a href="">Add Tasks</a></button>
 
-
-        @foreach ($select_Tasks as $task)
-            
+        @foreach ($tasks as $task)
+            <h3>{{ $task->name_task }}</h3>
+            <h3>{{ $task->startTask }}</h3>
+            <h3>{{ $task->endTask }}</h3>
         @endforeach
 @endsection
+
 

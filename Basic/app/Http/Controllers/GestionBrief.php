@@ -64,7 +64,10 @@ class GestionBrief extends Controller
     public function edit($id)
     {
         $brief = Brief::where('id',$id)->first();
-        return view('editeBrief', compact('brief'));
+        $tasks = $brief->Task;
+        return view('editeBrief', compact('brief', 'tasks'));
+        // return $tasks;
+
     }
 
     /**

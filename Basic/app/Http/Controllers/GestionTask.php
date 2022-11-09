@@ -13,8 +13,7 @@ class GestionTask extends Controller
      */
     public function index()
     {
-        $select_Tasks = Task::all();
-        return view('editeBrief', compact('select_Tasks'));
+        
     }
 
     /**
