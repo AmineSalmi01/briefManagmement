@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GestionBrief;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('/brief', GestionBrief::class);
+Route::resource('/Tasks', GestionBrief::class);
