@@ -38,9 +38,9 @@ class GestionTask extends Controller
         $insert_Task->Name_task = $request->input('nameTasks');
         $insert_Task->startTask = $request->input('date_tasks');
         $insert_Task->endTask = $request->input('end_tasks');
-        $insert_Task->brief_id = $request->input('id_brief');
+        $insert_Task->brief_id = $request->input('brief_id');
         $insert_Task->save();
-        return redirect()->route('task.create');
+        return redirect('brief'.'/'.$request->input('brief_id').'/edit');
     }
 
     /**
@@ -62,7 +62,8 @@ class GestionTask extends Controller
      */
     public function edit($id)
     {
-        //
+        $Task = Task::where('id',$id)->first();
+        return view('editeTasks', compact('Task'));
     }
 
     /**
@@ -74,7 +75,12 @@ class GestionTask extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $edit_Task = Task::find($id);
+        $edit_Task->name_task = $request->input('name_Task');
+        $edit_Task->startTask = $request->input('start_Task');
+        $edit_Task->endTask = $request->input('end_Task');
+        $edit_Task->save();
+        return redirect('brief'.'/'.$edit_Task->brief_id.'/edit');
     }
 
     /**

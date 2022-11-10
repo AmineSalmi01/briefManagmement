@@ -1,7 +1,7 @@
 @extends('layout')
 @section('addTasks')
 
-    <form action="{{ route('Tasks.store', $id) }}" method="POST">
+    <form action="{{ route('brief.Tasks.store', $id) }}" method="POST">
         @csrf
 
     <div class="card" style="width: 18rem;">
@@ -12,7 +12,7 @@
         <li class="list-group-item"><input type="text" name="nameTasks"></li>
         <li class="list-group-item"><input type="date" name="date_tasks"></li>
         <li class="list-group-item"><input type="date" name="end_tasks"></li>
-        <li class="list-group-item"><input type="text" name="brief_id" value="{{ $id }}"></li>
+        <li class="list-group-item"><input type="hidden" name="brief_id" value="{{ $id }}"></li>
         </ul>
         <div class="card-body">
             <button type="submit" class="btn btn-success">Save</button>

@@ -11,13 +11,40 @@
         <input type="hidden" name="id_brief" value="{{  $brief->id }}">
         <button type="submit" class="btn btn-primary">Save</button>
     </form>
-        <button><a href="{{ route('Tasks.create', $brief->id) }}">Add Tasks</a></button>
+        <a href="{{ route('brief.Tasks.create', $brief->id) }}"><button class="btn btn-success">Add Tasks</button></a>
 
-        @foreach ($tasks as $task)
-            <h3>{{ $task->name_task }}</h3>
-            <h3>{{ $task->startTask }}</h3>
-            <h3>{{ $task->endTask }}</h3>
-        @endforeach
+        
+
+
+
+        <table class="table">
+            
+            <thead>
+              <tr>
+                <th scope="col">Name Task</th>
+                <th scope="col">Start Date</th>
+                <th scope="col">End Task</th>
+                <th scope="col">Edite/Delete</th>
+              </tr>
+            </thead>
+            @foreach ($tasks as $task)
+                <tbody>
+                    <tr>
+                        <td>{{ $task->name_task }}</td>
+                        <td>{{ $task->startTask }}</td>
+                        <td>{{ $task->endTask }}</td>
+                        <td>
+                            <a href="{{ route('Tasks.edit', $task->id   ) }}"><button class="btn btn-primary">edite</button></a>
+                            <a href=""><button class="btn btn-danger">delete</button></a>
+                        </td>
+                    
+                    </tr>
+                </tbody>
+            @endforeach
+            
+          </table>
+
+        
 @endsection
 
 

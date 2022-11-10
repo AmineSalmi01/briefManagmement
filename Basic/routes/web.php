@@ -20,4 +20,4 @@ Route::get('/', function () {
 });
 
 Route::resource('/brief', GestionBrief::class);
-Route::resource('/Tasks', GestionTask::class);
+Route::resource('brief.Tasks', GestionTask::class)->shallow();
