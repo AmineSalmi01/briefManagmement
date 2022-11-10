@@ -21,9 +21,9 @@ class GestionTask extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
+        return view('AddTasks', compact('id'));
     }
 
     /**
@@ -34,7 +34,13 @@ class GestionTask extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $insert_Task = new Task();
+        $insert_Task->Name_task = $request->input('nameTasks');
+        $insert_Task->startTask = $request->input('date_tasks');
+        $insert_Task->endTask = $request->input('end_tasks');
+        $insert_Task->brief_id = $request->input('id_brief');
+        $insert_Task->save();
+        return redirect()->route('task.create');
     }
 
     /**

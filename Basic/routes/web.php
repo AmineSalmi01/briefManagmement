@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GestionBrief;
+use App\Http\Controllers\GestionTask;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,4 +20,4 @@ Route::get('/', function () {
 });
 
 Route::resource('/brief', GestionBrief::class);
-Route::resource('/Tasks', GestionBrief::class);
+Route::resource('/Tasks', GestionTask::class);

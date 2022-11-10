@@ -29,5 +29,6 @@
     @yield('showBrief')
     @yield('editeBrief')
     @yield('addBrief')
+    @yield('addTasks')
 </body>
 </html>

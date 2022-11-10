@@ -8,9 +8,10 @@
         <input type="text" name="name_brief" value="{{  $brief->Name_brief }}">
         <input type="date" name="date_brief" value="{{  $brief->startBrief }}">
         <input type="date" name="end_brief" value="{{  $brief->endBrief }}">
+        <input type="hidden" name="id_brief" value="{{  $brief->id }}">
         <button type="submit" class="btn btn-primary">Save</button>
     </form>
-        <button><a href="">Add Tasks</a></button>
+        <button><a href="{{ route('Tasks.create', $brief->id) }}">Add Tasks</a></button>
 
         @foreach ($tasks as $task)
             <h3>{{ $task->name_task }}</h3>
