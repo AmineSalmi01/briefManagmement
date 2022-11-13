@@ -89,8 +89,12 @@ class GestionTask extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function destroy($id)
     {
-        //
+        $delete_task = Task::where('id',$id)->first();
+        $brief_id = $delete_task->brief_id;
+        $delete_task->delete($id);
+        return redirect('brief/' . $brief_id . '/edit');
     }
 }

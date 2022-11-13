@@ -39,7 +39,7 @@ Route::delete('delete_apprenants/{id}', [apprenants_controller::class, 'delete_a
 
 
 Route::resource('/brief', GestionBrief::class);
-Route::resource('brief.Tasks', GestionTask::class)->shallow();
+Route::resource('/brief.Tasks', GestionTask::class)->shallow();
 Route::get('Assign/{id_brief}', [assignController::class, 'assign_view'])->name('Assign_brief');
 Route::get('Attach/{id_brief}/{id_apprenant}', [assignController::class, 'assign'])->name('Attach_brief');
 Route::get('Detach/{id_brief}/{id_apprenant}', [assignController::class, 'dettach'])->name('detach_brief');
