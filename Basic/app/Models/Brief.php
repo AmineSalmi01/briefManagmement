@@ -12,4 +12,10 @@ class Brief extends Model
     public function Task(){
         return $this->hasMany(Task::class);
     }
+    
+    public function Apprenants(){
+        return $this->belongsToMany(Apprenant::class, 'apprenants_brief', 'id_brief', 'id_apprenant');
+    }
+    
+    
 }

@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.searsh{
+    height: 35px;
+    margin: 20px;
+    text-decoration: none;
+}
+.btn_add_promotion{
+    margin: 20px;
+}

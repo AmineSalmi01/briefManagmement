@@ -1,5 +1,5 @@
 @extends('layout')
-@section('editeTask')
+@section('content')
 
     <form action="{{ route('Tasks.update', $Task->id) }}" method="POST">
         @csrf

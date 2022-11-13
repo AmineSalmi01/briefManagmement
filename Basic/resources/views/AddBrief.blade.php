@@ -1,5 +1,5 @@
 @extends('layout')
-@section('addBrief')
+@section('content')
 
     <form action="{{ route('brief.store') }}" method="POST">
         @csrf

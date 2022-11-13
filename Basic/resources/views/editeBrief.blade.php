@@ -1,6 +1,6 @@
 
 @extends('layout')
-@section('editeBrief')
+@section('content')
 
     <form action="{{ route('brief.update', $brief->id) }}" method="POST">
         @csrf

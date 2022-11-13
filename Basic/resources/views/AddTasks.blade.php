@@ -1,5 +1,5 @@
 @extends('layout')
-@section('addTasks')
+@section('content')
 
     <form action="{{ route('brief.Tasks.store', $id) }}" method="POST">
         @csrf

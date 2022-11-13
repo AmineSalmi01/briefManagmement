@@ -12,24 +12,14 @@
     <nav>
         <ul class="nav nav-tabs">
             <li class="nav-item">
-              <a class="nav-link"href="#">Promotion</a>
+              <a class="nav-link"href="{{ route('Promotion.index') }}">Promotion</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Apprenants</a>
+              <a class="nav-link" href="{{ route('brief.index') }}">Brief</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ route('brief.create') }}">Add Brief</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Tasks</a>
-              </li>
           </ul>
     </nav>
 
-    @yield('showBrief')
-    @yield('editeBrief')
-    @yield('addBrief')
-    @yield('addTasks')
-    @yield('editeTask')
+    @yield('content')
 </body>
 </html>
