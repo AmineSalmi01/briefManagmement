@@ -17,7 +17,7 @@ class assignController extends Controller
         // $assign_data = new ApprenantsBrief();
         // $assign_data->id_brief = $id_brief;
         // $assign_data->id_apprenant = $id_apprenant;
-        // $assign_data->save();
+        // $assign_data->save();    
         $brief = Brief::where('id', $id_brief)->first();
         $brief->apprenants()->attach($id_apprenant);
         return redirect(route('Assign_brief', ['id_brief'=>$id_brief]));

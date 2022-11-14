@@ -15,3 +15,19 @@ a{
 .btn_add_promotion{
     margin: 20px;
 }
+#btn_addBrief{
+    margin-left: 45%;
+    margin-top: 20px;
+}
+#contant{
+    margin-left: 45px;
+    margin-bottom: 25px;
+}
+#card_addBrief{
+    margin-left: 40%;
+    margin-top: 10%;
+}
+#card_addTask{
+    margin-left: 40%;
+    margin-top: 10%;
+}

@@ -4,7 +4,7 @@
     <form action="{{ route('brief.Tasks.store', $id) }}" method="POST">
         @csrf
 
-    <div class="card" style="width: 18rem;">
+    <div class="card" id="card_addTask" style="width: 18rem;">
         <div class="card-body">
         <h5 class="card-title">Add task</h5>
         </div>

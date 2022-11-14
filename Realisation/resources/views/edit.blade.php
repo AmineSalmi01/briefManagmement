@@ -13,7 +13,7 @@
         @csrf
         @method('PUT')
         <input type="text" name="update_input" value="{{ $data[0]->name }}">
-        <input type="submit" value="update">
+        <input type="submit" value="update" class="btn btn-secondary">
     </form>
 
     <table class="table">
@@ -87,7 +87,7 @@
                         
                         @csrf
                         <input type="text" name="prenom" placeholder="prenome">
-                        <input type="tex" name="nom" placeholder="nome">
+                        <input type="tex" name="nom" placeholder="nom">
                         <input type="email" name="email" placeholder="email">
                         
                         <input type="hidden" name="id_promotion" value="{{ $data[0]->id_promo }}">  
