@@ -13,11 +13,8 @@ class assignController extends Controller
         $data = Apprenant::all();
         return view('Assign', compact('data', 'id_brief'));
     }
-    public function assign($id_brief, $id_apprenant){
-        // $assign_data = new ApprenantsBrief();
-        // $assign_data->id_brief = $id_brief;
-        // $assign_data->id_apprenant = $id_apprenant;
-        // $assign_data->save();    
+    
+    public function assign($id_brief, $id_apprenant){ 
         $brief = Brief::where('id', $id_brief)->first();
         $brief->apprenants()->attach($id_apprenant);
         return redirect(route('Assign_brief', ['id_brief'=>$id_brief]));
