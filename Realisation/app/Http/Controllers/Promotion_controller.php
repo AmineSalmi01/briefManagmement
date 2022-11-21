@@ -16,7 +16,7 @@ class Promotion_controller extends Controller
     public function index()
     {
         $data = list_Promotion::all();
-        return view('index',[
+        return view('index',[   
             'data'=>$data
         ]);
     }
@@ -42,7 +42,7 @@ class Promotion_controller extends Controller
         $promotion = new list_Promotion();
         $promotion->name = $request->input('input');
         $promotion->save();
-        return redirect()->route('Promotion.index');    
+        return redirect()->route('Promotion.index');
     }
 
     /**
